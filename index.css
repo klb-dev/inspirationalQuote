@@ -5,22 +5,34 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-#image {
-    background-color: rgb(41, 39, 39);
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 100vh;
-}
-
-#quote{
+.quote{
     background-color: white;
     width: 436px;
     height: 137px;
-    padding: 28px 33px;
-    margin: 100px auto;
+    padding: 10px 22px;
+    margin: auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 35%;
+    left: 35%;
+}
+
+.quote:hover {
+    background-color: #88f6eb;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    cursor: pointer;
+    color: darkolivegreen;
+
 }
 
 .quote-text{
@@ -32,4 +44,9 @@ body {
     font-weight: 600;
     font-size: 18px;
     align-self: flex-end;
+}
+
+#image {
+    width: 100vw;
+    height: 100vh;
 }

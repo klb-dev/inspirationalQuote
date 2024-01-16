@@ -34,7 +34,14 @@ function imageRand(imgArr) {
     return imgArr[Math.floor(Math.random() * imgArr.length)];
 }
 
-const image = document.getElementById("image");
-const result = image.style.background =  "url('" + imageRand(randomImage) + "')"; 
-image.innerHTML = result;
-console.log(image);
+function quoteRand(quoteArr) {
+    return quoteArr[Math.floor(Math.random() * quoteArr.length)];
+}
+
+const quoteEl = document.getElementById("quote");
+quoteEl.classList.add("quote")
+const quoteResult = quoteEl.innerHTML = `<span class = "quote-text">${quoteRand(quotes).quote}</span> <br> <span class="quote-author">- ${quoteRand(quotes).author}</span>`;
+
+const bgImage = document.getElementById("image");
+const result = bgImage.style.background = "rgb(41, 39, 39) url(" + imageRand(randomImage) + ") no-repeat center center/cover"; 
+
