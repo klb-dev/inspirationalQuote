@@ -1,3 +1,35 @@
 body {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+#image {
+    background-color: rgb(41, 39, 39);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+#quote{
+    background-color: white;
+    width: 436px;
+    height: 137px;
+    padding: 28px 33px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.quote-text{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.quote-author {
+    font-weight: 600;
+    font-size: 18px;
+    align-self: flex-end;
 }

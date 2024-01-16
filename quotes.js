@@ -1,3 +1,4 @@
+
 const quotes = [
     {
         quote: "Today is your opportunity to build the tomorrow you want.",
@@ -20,3 +21,20 @@ const quotes = [
         author: "Justin Bieber"
     }
 ]
+
+let randomImage = [
+    "images/bridgeOnCliff.jpeg", 
+    "images/elephantTree.jpeg", 
+    "images/forestWithDropEarth.jpeg", 
+    "images/lake&forest.jpeg", 
+    "images/nature.jpg"
+]
+
+function imageRand(imgArr) {
+    return imgArr[Math.floor(Math.random() * imgArr.length)];
+}
+
+const image = document.getElementById("image");
+const result = image.style.background =  "url('" + imageRand(randomImage) + "')"; 
+image.innerHTML = result;
+console.log(image);
