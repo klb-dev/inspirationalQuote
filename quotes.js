@@ -23,25 +23,23 @@ const quotes = [
 ]
 
 const randomImage = [
-    "images/bridgeOnCliff.jpeg", 
-    "images/elephantTree.jpeg", 
-    "images/forestWithDropEarth.jpeg", 
-    "images/lake&forest.jpeg", 
+    "images/bridgeOnCliff.jpg", 
+    "images/elephantTree.jpg", 
+    "images/forestWithDropEarth.jpg", 
+    "images/lake&forest.jpg", 
     "images/nature.jpg"
 ]
 
 const quoteEl = document.getElementById("quote");
 
-quotes.forEach(function(item){
-    quoteEl.innerHTML = `
-        <span class = "quote-text">${quoteRand(item).quote}</span> <br> <span class="quote-author">- ${quoteRand(item).author}</span>`;
-        console.log(quoteEl)
-})
-
 function quoteRand() {
     return quotes[Math.floor(Math.random() * quotes.length)];
 }
 
+const randomQuote = quoteRand();
+
+quoteEl.innerHTML = `
+        <span class = "quote-text">${randomQuote.quote}</span> <br> <span class="quote-author">- ${randomQuote.author}</span>`;
 
 function imageRand() {
     return randomImage[Math.floor(Math.random() * randomImage.length)];

@@ -54,9 +54,26 @@ a:hover{
 
 .instruction {
     position: absolute;
-    bottom: 5%;
+    bottom: 10%;
     right: 5%;
     font-size: 16px;
     font-weight: 600;
     color: white;
+}
+
+.developer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: transparent;
+    margin: 0;
+}
+
+.developer a {
+    text-decoration: underline;
+    color: #5035ff;
+}
+
+.developer a:hover {
+    color: #ff35b3;
 }
