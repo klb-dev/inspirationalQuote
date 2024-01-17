@@ -22,7 +22,7 @@ const quotes = [
     }
 ]
 
-let randomImage = [
+const randomImage = [
     "images/bridgeOnCliff.jpeg", 
     "images/elephantTree.jpeg", 
     "images/forestWithDropEarth.jpeg", 
@@ -30,17 +30,22 @@ let randomImage = [
     "images/nature.jpg"
 ]
 
-function imageRand(imgArr) {
-    return imgArr[Math.floor(Math.random() * imgArr.length)];
-}
-
-function quoteRand(quoteArr) {
-    return quoteArr[Math.floor(Math.random() * quoteArr.length)];
-}
-
 const quoteEl = document.getElementById("quote");
-quoteEl.classList.add("quote")
-const quoteResult = quoteEl.innerHTML = `<span class = "quote-text">${quoteRand(quotes).quote}</span> <br> <span class="quote-author">- ${quoteRand(quotes).author}</span>`;
+
+quotes.forEach(function(item){
+    quoteEl.innerHTML = `
+        <span class = "quote-text">${quoteRand(item).quote}</span> <br> <span class="quote-author">- ${quoteRand(item).author}</span>`;
+        console.log(quoteEl)
+})
+
+function quoteRand() {
+    return quotes[Math.floor(Math.random() * quotes.length)];
+}
+
+
+function imageRand() {
+    return randomImage[Math.floor(Math.random() * randomImage.length)];
+}
 
 const bgImage = document.getElementById("image");
 const result = bgImage.style.background = "rgb(41, 39, 39) url(" + imageRand(randomImage) + ") no-repeat center center/cover"; 

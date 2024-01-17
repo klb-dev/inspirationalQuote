@@ -3,6 +3,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
+    position: relative;
 }
 
 .quote{
@@ -49,4 +50,13 @@ a:hover{
 #image {
     width: 100vw;
     height: 100vh;
+}
+
+.instruction {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
 }
